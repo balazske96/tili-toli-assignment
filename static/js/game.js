@@ -17,13 +17,13 @@ for (let n = 0; n < 3; n++) {
     let m = 0;
     for (let i = 0; i <= array.length; i++) {
         let tempRow = document.querySelector(`#row-${n}`);
-        tempRow.insertAdjacentHTML('beforeend', `<div class="piece" id="${array[i]}">Z</div>`);
+        tempRow.insertAdjacentHTML('beforeend', `<div class="piece" id="${array[i]}"></div>`);
         m++;
         if (m === 3) {
             m = 0;
             break;
         }
-    
+
 
     }
     array.splice(0, 3);
