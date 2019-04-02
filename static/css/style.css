@@ -7,16 +7,81 @@
     font-size: 35px;
     text-align: center;
     vertical-align: middle;
-    background-image: url("../img/cc_logo.png");
 }
+
+#piece-0{
+    background-position: 0% 0%;
+    background-image: url("../img/cc_logo.png");
+
+
+}
+
+#piece-1{
+    background-position: 50% 0%;
+    background-image: url("../img/cc_logo.png");
+
+
+}
+
+#piece-2{
+    background-position: 100% 0%;
+    background-image: url("../img/cc_logo.png");
+
+
+}
+
+#piece-3{
+    background-position: 0% 50%;
+    background-image: url("../img/cc_logo.png");
+
+
+}
+
+#piece-4{
+    background-position: 50% 50%;
+    background-image: url("../img/cc_logo.png");
+
+
+}
+
+#piece-5{
+    background-position: 100% 50%;
+    background-image: url("../img/cc_logo.png");
+
+
+}
+
+#piece-6{
+    background-position: 0% 100%;
+    background-image: url("../img/cc_logo.png");
+
+
+}
+
+#piece-7{
+    background-position: 50% 100%;
+    background-image: url("../img/cc_logo.png");
+
+
+}
+
+#piece-8{
+    background-position: 100% 100%;
+    background-color: grey;
+
+
+}
+
 
 
 #wrapper{
     width: max-content;
+    position: relative;
 }
 
 .row{
     margin:0;
+    position: relative;
 }
 
 body{
