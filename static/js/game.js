@@ -28,3 +28,9 @@ for (let n = 0; n < 3; n++) {
     }
     array.splice(0, 3);
 }
+
+
+
+
+
+
