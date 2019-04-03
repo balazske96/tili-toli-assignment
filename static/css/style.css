@@ -14,10 +14,9 @@
 }
 
 
-
-.piece-container{
+.piece-container {
     display: inline-block;
-    margin:0;
+    margin: 0;
     height: 152px;
 
 
@@ -72,13 +71,11 @@
 }
 
 
-
-#wrapper{
+#wrapper {
     border: 4px solid black;
     width: max-content;
     position: absolute;
-    top: 30%;
-    right: 20%;
+    right: 30px;
 
 }
 
@@ -87,7 +84,6 @@ body {
 
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
     background-color: #49554f;
-    padding-top: 15%;
 }
 
 
@@ -138,7 +134,7 @@ body {
 
 #name_input:focus {
     outline: none;
-    border:3px solid #e2ff0b;
+    border: 3px solid #e2ff0b;
     background-color: #fff;
 }
 
@@ -160,24 +156,23 @@ body {
     margin-bottom: 10px;
 }
 
-form{
+form {
     text-align: center;
 }
 
-.sample_image{
+.sample_image {
     border: 5px solid black;
     width: 450px;
     height: 450px;
     background-image: url("../img/cc_logo.png");
     position: absolute;
-    top: 30%;
-    left: 20%;
+    left: 30px;
     display: inline-block;
     background-size: contain;
 
 }
 
-#header{
+#header {
     border: 1px solid white;
     border-radius: 5px;
     background-color: #ccb52f;
@@ -185,9 +180,13 @@ form{
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-family: "Lucida Sans Unicode", monospace;
     font-size: xx-large;
-    position: absolute;
     top: 5%;
-    left: 45%;
     padding: 5px;
+    text-align: center;
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+
 }
 
