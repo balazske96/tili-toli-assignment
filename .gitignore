@@ -2,3 +2,11 @@
 venv/*
 */.idea/*
 .idea/*
+# mypy
+.mypy_cache/
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+*.py[cod]
