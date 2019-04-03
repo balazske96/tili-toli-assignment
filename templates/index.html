@@ -1,10 +1,8 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <button id = 'reset' class='click'>Reset the game!</button>
-    <form class = 'click' id='go-back' action="{{ url_for('tilitoli')}}">
-    <input type="submit" value="Go back to main menu">
-    </form>
+    <button id="reset" class='click'>Reset the game!</button><br>
+    <a id="redirect" class="click" href="/" >Back to main menu</a>
 
     <div class="sample_image">
 

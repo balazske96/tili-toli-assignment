@@ -4,6 +4,7 @@ let resetButton = document.getElementById('reset');
 
 let array = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
+let redirectButton = document.getElementById("redirect");
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -58,41 +59,41 @@ function movePiece() {
 }
 
 
-function resetGame(){
+function resetGame() {
     let nodes = document.getElementsByClassName('piece');
-    for (let h = 0; h < origiArray.length; h++){
+    for (let h = 0; h < origiArray.length; h++) {
         nodes[h].setAttribute('id', `piece-${origiArray[h]}`);
     }
 
 }
 
 
-
-function checkWin(){
+function checkWin() {
 
     let nodes = document.getElementsByClassName('piece');
     let currentArray = [];
     let winnerArray = ["piece-0", "piece-1", "piece-2", "piece-3", "piece-4", "piece-5", "piece-6", "piece-7", "piece-8"];
-    for (let node of nodes){
+    for (let node of nodes) {
         currentArray.push(node.id);
     }
-    if (JSON.stringify(currentArray) === JSON.stringify(winnerArray)){
+    if (JSON.stringify(currentArray) === JSON.stringify(winnerArray)) {
 
-        setTimeout(function(){let newGame = confirm('You Win! Would you like to play again?')}, 10);
-        if (newGame === true){
-          location.replace('/')
+        setTimeout(function () {
+            let newGame = confirm('You Win! Would you like to play again?')
+        }, 10);
+        if (newGame === true) {
+            location.replace('/')
         }
 
 
-
-
     }
-
-
 
 
 }
 
+function redirectToMainPage() {
+    window.location.href = "/"
+}
 
 
 let pieces = document.getElementsByClassName('piece-container');
@@ -105,5 +106,6 @@ for (let piece of pieces) {
 }
 
 resetButton.addEventListener('click', resetGame);
+// redirectButton.addEventListener('click', redirectToMainPage);
 
 
