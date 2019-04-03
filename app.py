@@ -7,6 +7,7 @@ app = Flask(__name__)
 def tilitoli():
     return render_template('index.html')
 
+
 @app.route('/', methods=['POST', 'GET'])
 def welcome():
     if request.method == 'GET':
