@@ -11,54 +11,54 @@
 }
 
 
-.piece-container{
-        display: inline-block;
-    margin:0;
+.piece-container {
+    display: inline-block;
+    margin: 0;
     height: 102px;
 
 }
 
-#piece-0{
+#piece-0 {
     background-position: 0% 0%;
 
 }
 
-#piece-1{
+#piece-1 {
     background-position: 50% 0%;
 
 }
 
-#piece-2{
+#piece-2 {
     background-position: 100% 0%;
 
 }
 
-#piece-3{
+#piece-3 {
     background-position: 0% 50%;
 
 }
 
-#piece-4{
+#piece-4 {
     background-position: 50% 50%;
 
 }
 
-#piece-5{
+#piece-5 {
     background-position: 100% 50%;
 
 }
 
-#piece-6{
+#piece-6 {
     background-position: 0% 100%;
 
 }
 
-#piece-7{
+#piece-7 {
     background-position: 50% 100%;
 
 }
 
-#piece-8{
+#piece-8 {
     background-position: 100% 100%;
     background-image: none;
     background-color: grey;
@@ -67,18 +67,95 @@
 }
 
 
-#wrapper{
+#wrapper {
+    margin: 0 auto;
     width: max-content;
     position: relative;
 }
 
-.row{
-    margin:0;
+.row {
+    margin: 0;
     position: relative;
 }
 
-body{
-    margin: auto;
-    width: max-content;
+body {
+
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    background-color: #49554f;
     padding-top: 15%;
 }
+
+
+.click {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color: #ccb52f;
+    color: #ffffff;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-style: italic;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+    width: 20%;
+    font-size: 30px;
+
+
+}
+
+.click:hover {
+    text-align: center;
+    border-style: none;
+    background-color: #9f8d25;
+}
+
+#first_h1 {
+    text-align: center;
+    font-size: 48px;
+    size: A4;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    margin-bottom: 0;
+
+}
+
+#name_input {
+    background-color: #cccccc;
+    text-align: center;
+    font-size: 40px;
+    width: 30%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+
+}
+
+#name_input:focus {
+    outline: none;
+    border:3px solid #e2ff0b;
+    background-color: #fff;
+}
+
+#enter_name {
+    text-align: center;
+    font-size: 38px;
+    margin-top: 0;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#welcome_msg {
+    text-align: center;
+    font-size: 48px;
+    size: A4;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    margin-bottom: 10px;
+}
+
+form{
+    text-align: center;
+}
+
