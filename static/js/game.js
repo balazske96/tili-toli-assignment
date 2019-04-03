@@ -1,6 +1,8 @@
 let wrapperDiv = document.querySelector('#wrapper');
 
-let array = [0, 1, 2, 3, 4, 5, 6, 8, 7];
+let resetButton = document.getElementById('reset');
+
+let array = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 
 function shuffleArray(array) {
@@ -10,7 +12,10 @@ function shuffleArray(array) {
     }
 }
 
-//shuffleArray(array);
+
+shuffleArray(array);
+
+let origiArray = Array.from(array);
 
 for (let n = 0; n < 3; n++) {
     wrapperDiv.insertAdjacentHTML('beforeend', `<div class="row" id="row-${n}"></div>`);
@@ -52,6 +57,17 @@ function movePiece() {
     }
 }
 
+
+function resetGame(){
+    let nodes = document.getElementsByClassName('piece');
+    for (let h = 0; h < origiArray.length; h++){
+        nodes[h].setAttribute('id', `piece-${origiArray[h]}`);
+    }
+
+}
+
+
+
 function checkWin(){
 
     let nodes = document.getElementsByClassName('piece');
@@ -62,7 +78,13 @@ function checkWin(){
     }
     if (JSON.stringify(currentArray) === JSON.stringify(winnerArray)){
 
-        setTimeout(function(){alert('Csicska vagy')}, 10)
+        setTimeout(function(){let newGame = confirm('You Win! Would you like to play again?')}, 10);
+        if (newGame === true){
+          location.replace('/')
+        }
+
+
+
 
     }
 
@@ -70,6 +92,7 @@ function checkWin(){
 
 
 }
+
 
 
 let pieces = document.getElementsByClassName('piece-container');
@@ -80,5 +103,7 @@ for (let piece of pieces) {
     piece.addEventListener('click', movePiece)
 
 }
+
+resetButton.addEventListener('click', resetGame);
 
 
