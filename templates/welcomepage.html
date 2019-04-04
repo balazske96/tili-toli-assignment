@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+    <title>Tili-Toli</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="icon" href="../static/img/favicon.png">
+</head>
+<body>
+    {% if player %}
+        <h1 id="welcome_msg">Hi {{ player }}!</h1>
+        <form action="/game">
+            <button id="click_start" class="click" >Start! </button>
+        </form>
+    {% else %}
+        <h1 id="first_h1">Welcome on Tili-Toli!</h1>
+        <h2 id="enter_name">Please enter your name here: </h2>
+        <div align="center">
+            <form method="post">
+                <label><input id="name_input" type="text" name="name"></label><br>
+                <button id="click_send" class="click" type="submit">Send!</button>
+            </form>
+        </div>
+    {% endif %}
+</body>

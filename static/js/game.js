@@ -62,7 +62,7 @@ function checkWin(){
     }
     if (JSON.stringify(currentArray) === JSON.stringify(winnerArray)){
 
-        setTimeout(function(){alert('Win')}, 10)
+        setTimeout(function(){alert('Csicska vagy')}, 10)
 
     }
 
@@ -81,4 +81,68 @@ for (let piece of pieces) {
 
 }
 
+// stopWATCH------------------------------------------------------------------------------------------------------------------------
+var stopTime = document.getElementById("stopTimer");
+const createTimer = function() {
+    const timerContainer = document.createElement("div");
+    timerContainer.setAttribute("id", "timerContainer");
+    let stopper = document.createElement("h1");
+    stopper.setAttribute("id", "timer");
+    const time = document.createElement("time");
+    const initial = document.createElement("button"), finish = document.createElement("button"), again = document.createElement("button");
+    initial.setAttribute("id", "start");
+    finish.setAttribute("id", "stop");
+    again.setAttribute("id", "clear");
+    initial.textContent = "Start";
+    finish.textContent = "Stop";
+    again.textContent = "Clear";
+    time.textContent = "00:00";
+    stopper.appendChild(time);
+    timerContainer.appendChild(stopper);
+    timerContainer.appendChild(finish);
+    timerContainer.appendChild(initial);
+    timerContainer.appendChild(again);
+    stopTime.appendChild(timerContainer);
+
+    return stopTime;
+};
+
+createTimer();
+
+
+
+
+
+
+
+
+var start = document.getElementById('start'),
+    stop = document.getElementById('stop'),
+    clear = document.getElementById('clear'),
+    watch = document.getElementById('timer'),
+    seconds = 0, minutes = 0,
+    t;
+
+function add() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+    }
+
+    watch.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+start.onclick = timer;
+stop.onclick = function() {
+    clearTimeout(t);
+};
+clear.onclick = function() {
+    watch.textContent = "00:00";
+    seconds = 0; minutes = 0;
+};
 

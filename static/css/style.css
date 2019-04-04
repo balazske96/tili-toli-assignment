@@ -1,84 +1,255 @@
 .piece {
     cursor: pointer;
     border: 1px solid black;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     font-size: 35px;
     text-align: center;
     vertical-align: middle;
-    background-image: url("../img/cc_logo.png");
+    background-image: url("../img/fack-it.png");
     display: inline-block;
-}
-
-
-.piece-container{
-        display: inline-block;
-    margin:0;
-    height: 102px;
+    position: relative;
+    background-size: 300%;
 
 }
 
-#piece-0{
+
+.piece-container {
+    display: inline-block;
+    margin: 0;
+    height: 152px;
+
+
+}
+
+#piece-0 {
     background-position: 0% 0%;
 
 }
 
-#piece-1{
+#piece-1 {
     background-position: 50% 0%;
 
 }
 
-#piece-2{
+#piece-2 {
     background-position: 100% 0%;
 
 }
 
-#piece-3{
+#piece-3 {
     background-position: 0% 50%;
 
 }
 
-#piece-4{
+#piece-4 {
     background-position: 50% 50%;
 
 }
 
-#piece-5{
+#piece-5 {
     background-position: 100% 50%;
 
 }
 
-#piece-6{
+#piece-6 {
     background-position: 0% 100%;
 
 }
 
-#piece-7{
+#piece-7 {
     background-position: 50% 100%;
 
 }
 
-#piece-8{
+#piece-8 {
     background-position: 100% 100%;
     background-image: none;
-    background-color: grey;
+    background-color: black;
 
 
 }
 
 
-#wrapper{
+#wrapper {
+    border: 4px solid black;
     width: max-content;
+    position: absolute;
+    right: 30px;
+
+}
+
+
+body {
+
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    background-color: #49554f;
+
     position: relative;
 }
 
-.row{
-    margin:0;
-    position: relative;
+
+.click {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color: #ccb52f;
+    color: #ffffff;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-style: italic;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+    width: 20%;
+    font-size: 30px;
+
+
 }
 
-body{
-    margin: auto;
+.click:hover {
+    text-align: center;
+    border-style: none;
+    background-color: #9f8d25;
+}
+
+#first_h1 {
+    text-align: center;
+    font-size: 48px;
+    size: A4;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    margin-bottom: 0;
+
+}
+
+#name_input {
+    background-color: #cccccc;
+    text-align: center;
+    font-size: 40px;
+    width: 30%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+
+}
+
+#name_input:focus {
+    outline: none;
+    border: 3px solid #e2ff0b;
+    background-color: #fff;
+}
+
+#enter_name {
+    text-align: center;
+    font-size: 38px;
+    margin-top: 0;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#welcome_msg {
+    text-align: center;
+    font-size: 48px;
+    size: A4;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    margin-bottom: 10px;
+}
+
+form {
+    text-align: center;
+}
+
+.sample_image {
+    border: 5px solid black;
+    width: 450px;
+    height: 450px;
+    background-image: url("../img/fack-it.png");
+    position: absolute;
+    left: 30px;
+    display: inline-block;
+    background-size: contain;
+
+}
+
+#header {
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #ccb52f;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: "Lucida Sans Unicode", monospace;
+    font-size: xx-large;
+    top: 5%;
+    padding: 5px;
+    text-align: center;
     width: max-content;
-    padding-top: 15%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+
+}
+#stopTimer{
+
+    display: inline-flex;
+    position: absolute;
+    top: 600px;
+    right: 38%;
+    left: auto;
+
+}
+
+#timerContainer {
+
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+#start {
+  margin: 40px auto;
+  text-align: center;
+  color: #DAD6D6;
+  background: #48633B;
+  border:solid 2px #35492C;
+  border-radius:5px;
+  padding:16px 40px 16px;
+  letter-spacing: 2px;
+  cursor:pointer;
+}
+
+#stop {
+  margin: 40px 5px auto;
+  text-align: center;
+  color: #DAD6D6;
+  background: #721329;
+  border:solid 2px #590F20;
+  border-radius:5px;
+  padding:16px 40px 16px;
+  letter-spacing: 2px;
+  cursor:pointer;
+}
+
+#clear {
+  margin: 40px auto;
+  text-align: center;
+  color: #DAD6D6;
+  background: #564E58;
+  border:solid 2px #3E383F;
+  border-radius:5px;
+  padding:16px 40px 16px;
+  letter-spacing: 2px;
+  cursor:pointer;
+}
+
+#timer {
+  font-size: 36px;
+  letter-spacing: 2px;
+    color: #ccb52f;
+    position: center;
+
+
 }
